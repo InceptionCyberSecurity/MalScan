@@ -41,7 +41,7 @@ freshclam
 clamscan -r -i DIRECTORY | grep "infected" > clamav.txt
 
 # Linux Malware Detect LMD https://www.tecmint.com/install-linux-malware-detect-lmd-in-rhel-centos-and-fedora/
-# edit /usr/local/maldetect/conf.maldet to include your email and scan options 
+# edit /usr/local/maldetect/conf.maldet to include your email and scan options
 wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
 tar -xvf maldetect-current.tar.gz
 ls -l | grep maldetect
@@ -56,9 +56,7 @@ rm -rf /usr/local/maldetect/quarantine/* # remove quarantined files
 # maldet --clean SCANID
 # set crontab -e
 
+# process txt files
+cat lynis.txt clamav.txt rootkit.txt rkhunt.txt lmd.txt | sort > malrep.txt
 # mail
-mail -s "Lynis Report" you@yourdomain.com $umail -a lynis.txt
-mail -s "ClamAV Report" you@yourdomain.com $umail -a clamav.txt
-mail -s "chkrootkit Report" you@yourdomain.com $umail -a rootkit.txt
-mail -s "rkhunter Report" you@yourdomain.com $umail -a rkhunt.txt
-mail -s "LMD Report" you@yourdomain.com $umail -a lmd.txt
+mail -s "Malware Report" you@yourdomain.com $umail -a malrep.txt
