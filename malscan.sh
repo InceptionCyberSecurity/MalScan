@@ -41,6 +41,7 @@ freshclam
 clamscan -r -i DIRECTORY | grep "infected" > clamav.txt
 
 # Linux Malware Detect LMD https://www.tecmint.com/install-linux-malware-detect-lmd-in-rhel-centos-and-fedora/
+# edit /usr/local/maldetect/conf.maldet to include your email and scan options 
 wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
 tar -xvf maldetect-current.tar.gz
 ls -l | grep maldetect
