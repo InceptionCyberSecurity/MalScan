@@ -13,7 +13,7 @@ sudo apt install mailutils ssmtp epel-release clamd clamav clamav-daemon -y
 
 echo " "
 echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in malscan.sh "
-echo " The instructions are in the comment. "
+echo " The instructions are in the comments. You need to specify your Gmail credentials to allow SMTP traffic."
 echo " "
 read -p " What email do you want the results to be sent to ? " umail
 
