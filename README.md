@@ -4,8 +4,7 @@
  BASH script written by Nathan Jones nathan.jones@arcadeusops.com as part of on-prem Ubuntu 22.04 server setups. <br/>
 
 # USAGE
-To install <br/>
-git clone https://github.com/ArcadeusOPS/MalScan.git <br/>
+To install   git clone https://github.com/ArcadeusOPS/MalScan.git <br/>
 then ./malscaninstall.sh <br/>
 To start malware scanning ./malscan.sh <br/>
 
