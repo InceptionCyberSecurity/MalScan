@@ -1,11 +1,10 @@
 #!/bin/bash
 # script to check linux system for Malware. Tested on Ubuntu 22.04
-# This script is only the scan
+# This script is only the malware scan
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
 HOME=/
 SHELL=/bin/bash
-
 
 echo " "
 echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in malscaninstall.sh "
