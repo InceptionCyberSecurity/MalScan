@@ -34,8 +34,6 @@ sed -i -e '1iChkrootkit Report\' rootkit.txt
 
 # rkhunter
 sudo apt install rkhunter
-yum install epel-release
-yum install rkhunter
 rkhunter -c | grep "infected" > rkhunt.txt
 sed -i -e '1iRkhunter Report\' rkhunt.txt
 
