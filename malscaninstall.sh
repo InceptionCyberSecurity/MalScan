@@ -42,7 +42,7 @@ sed -i -e '1iRkhunter Report\' rkhunt.txt
 # clamav
 sudo apt-get install clamav
 freshclam
-clamscan -r -i DIRECTORY | grep "infected" > clamav.txt
+clamscan -r -i C: | grep "infected" > clamav.txt
 sed -i -e '1iClamAV Report\' clamav.txt
 
 # Linux Malware Detect LMD https://www.tecmint.com/install-linux-malware-detect-lmd-in-rhel-centos-and-fedora/
