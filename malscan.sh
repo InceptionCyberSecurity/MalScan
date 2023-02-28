@@ -14,7 +14,7 @@ echo " "
 read -p " What email do you want the results to be sent to ? " umail
 
 # lynis
-lynis audit system | grep malware > lynis.txt
+lynis audit system | grep "malware" > lynis.txt
 sed -i -e '1iLynis Report\' lynis.txt
 
 # Check rootkit
