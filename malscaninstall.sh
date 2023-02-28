@@ -1,6 +1,6 @@
 #!/bin/bash
 # script to check linux system for Malware. Tested on Ubuntu 22.04
-# This script includes installll procedures.
+# This script includes install AND scan procedures.
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
 HOME=/
