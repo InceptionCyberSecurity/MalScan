@@ -5,9 +5,12 @@
  Use cron to run malscan.h regularly. <br/>
 
 # USAGE
-To install   git clone https://github.com/ArcadeusOPS/MalScan.git <br/>
-then ./malscaninstall.sh <br/>
-To start malware scanning ./malscan.sh <br/>
+To install :- <br/>
+git clone https://github.com/ArcadeusOPS/MalScan.git <br/>
+<br/>
+./malscaninstall.sh <br/>
+To start malware scanning  <br/>
+./malscan.sh <br/>
 
 # License
 MIT License

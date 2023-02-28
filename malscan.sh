@@ -9,6 +9,7 @@ SHELL=/bin/bash
 echo " "
 echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in malscaninstall.sh "
 echo " This script will run the malware scans only. "
+echo " "
 echo " You need to specify your Gmail credentials to allow SMTP traffic when you run malscaninstall.sh "
 echo " "
 read -p " What email do you want the results to be sent to ? " umail
