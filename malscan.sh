@@ -43,6 +43,6 @@ rm -rf /usr/local/maldetect/quarantine/* # remove quarantined files
 # process txt files
 cat lynis.txt clamav.txt rootkit.txt rkhunt.txt lmd.txt | sort > malrep.txt
 sed -i -e '1iCOMBINED MALWARE REPORT Lynis chkrootkit rkhunter ClamAV LMD\' malrep.txt
-sed -i -e '2i***************************************\' malrep.txt
+sed -i -e '2i*************************************************************\' malrep.txt
 # mail
 mail -s "Malware Report" $umail -a malrep.txt
