@@ -3,6 +3,12 @@
  Sends a Combined Malware Report to a single user defined email. Scans entire drive so can take a long time! <br/>
  BASH script written by Nathan Jones nathan.jones@arcadeusops.com as part of on-prem Ubuntu 22.04 server setups. <br/>
 
+# USAGE
+To install <br/>
+git clone https://github.com/ArcadeusOPS/MalScan.git <br/>
+then ./malscaninstall.sh <br/>
+To start malware scanning ./malscan.sh <br/>
+
 # License
 MIT License
 Copyright (c) ArcadeusOPS
