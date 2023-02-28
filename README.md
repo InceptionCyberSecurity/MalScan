@@ -1,5 +1,5 @@
 # MalScan
- Quickly and simply detect malware on a Linux machine using chkrootkit, rkhunter, LMD, Lynis and ClamAV. <br/>
+ Quickly and effectively detect malware on a Linux machine using chkrootkit, rkhunter, LMD, Lynis and ClamAV. <br/>
  Sends a Combined Malware Report to a single user defined email. Scans entire drive so can take a long time! <br/>
  BASH script written by Nathan Jones nathan.jones@arcadeusops.com as part of on-prem Ubuntu 22.04 server setups. <br/>
 
