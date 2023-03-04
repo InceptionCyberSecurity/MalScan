@@ -13,7 +13,7 @@ sudo apt install mailutils ssmtp epel-release clamd clamav clamav-daemon -y
 # change email addresses to your Gmail account
 
 echo " "
-echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in malscaninstall.sh "
+echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in this file, malscaninstall.sh "
 echo " This script will install and run the malware scans. The instructions are in the comments. "
 echo " You need to specify your Gmail credentials to allow SMTP traffic."
 echo " "
