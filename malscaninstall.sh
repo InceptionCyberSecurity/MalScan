@@ -1,6 +1,5 @@
 #!/bin/bash
-# script to check linux system for Malware. Tested on Ubuntu 22.04
-# This script includes install AND scan procedures.
+# script to check linux system for Malware. Tested on Ubuntu 22.04. This script includes install AND scan procedures.
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
 HOME=/
@@ -9,8 +8,7 @@ SHELL=/bin/bash
 # install SMTP mail
 sudo update
 sudo apt install mailutils ssmtp epel-release clamd clamav clamav-daemon -y
-# nano /etc/ssmtp/ssmtp.conf
-# change email addresses to your Gmail account
+# nano /etc/ssmtp/ssmtp.conf and reconfig email addresses to your Gmail SMTP/POP accounts
 
 echo " "
 echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in this file, malscaninstall.sh "
