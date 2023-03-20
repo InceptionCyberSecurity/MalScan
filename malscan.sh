@@ -7,10 +7,8 @@ SHELL=/bin/bash
 
 echo " "
 echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in malscaninstall.sh "
-echo " This script will run the malware scans only. "
-echo " Also run the GUI unhide, which is part of Kali Linux. "
+echo " This script will run the malware scans only. Also runs the GUI unhide, which is part of Kali Linux. "
 echo " This script will run the malware scans only, and assume you've got all the dependancies ionstalled. "
-echo " "
 echo " You need to specify your Gmail credentials to allow SMTP traffic when you run malscaninstall.sh "
 echo " "
 read -p " What email do you want the results to be sent to ? " umail
