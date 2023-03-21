@@ -4,7 +4,6 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
 HOME=/
 SHELL=/bin/bash
-
 echo " "
 echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in malscaninstall.sh "
 echo " This script will run the malware scans only. Also runs the GUI unhide, which is part of Kali Linux. "

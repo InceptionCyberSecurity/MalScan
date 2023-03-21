@@ -26,7 +26,7 @@ To start malware scanning  <br/>
 ./malscan.sh <br/>
 
 # License
-MIT License
+MIT License 
 Copyright (c) ArcadeusOPS
 
 # TODO
