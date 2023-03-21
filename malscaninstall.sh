@@ -13,6 +13,7 @@ echo " Make sure you have setup your outgoing SMTP mail server as per the instru
 echo " This script will install and also run the malware scans. The instructions are in the comments. "
 echo " You need to specify your Gmail credentials to allow SMTP traffic."
 echo " Also run the GUI unhide, which is part of Kali Linux. "
+echo " "
 read -p " What email do you want the results to be sent to ? " umail
 
 # lynis
