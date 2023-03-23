@@ -2,7 +2,7 @@
  Quickly and effectively detect malware on a Linux machine using chkrootkit, rkhunter, LMD, Lynis and ClamAV. <br/>
  This is not a definitive scan but will give you a general snapshot. Run full scans as per your Policy. <br/>
  Sends a Combined Malware Report to a single, user defined email. Scans entire drive so can take a long time! <br/>
- BASH scripts written by Nathan Jones nathan.jones@arcadeusops.com as part of on-prem Ubuntu 22.04 server setups. <br/>
+ BASH scripts written by Nathan Jones nathan.jones@arcadeusops.com as part of on-prem Ubuntu server setups. <br/>
  Use cron to run malscan.h regularly. <br/>
 
 # Malware Forensics
@@ -26,7 +26,7 @@ To start malware scanning  <br/>
 ./malscan.sh <br/>
 
 # License
-MIT License 
+MIT License
 Copyright (c) ArcadeusOPS
 
 # TODO
