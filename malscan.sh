@@ -11,6 +11,7 @@ echo " This script assumes you've got all the dependancies installed from malins
 echo " You need to specify your Gmail credentials to allow SMTP traffic when you run malscaninstall.sh. "
 echo " "
 read -p " What email do you want the results to be sent to ? " umail
+echo " "
 
 # lynis
 lynis audit system | grep malware > lynis.txt
