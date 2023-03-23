@@ -13,6 +13,22 @@ echo " "
 read -p " What email do you want the results to be sent to ? " umail
 echo " "
 
+# investigation
+netstat -nalp                            # for unusual processes and open ports
+echo " "
+read -p " From netstat output given above, what is the PID of the suspicious process ? " pidsus
+echo " "
+ls -al /proc/$pidsus
+echo " "
+
+cp /proc/$pidsus/exe /tmp/recovered_bin   # to recover any deleted binary
+strings /proc/$pidsus/environ             # explore process environment
+cat /proc/$pidsus/stack                   # investigate Linux malware stack
+ls -al /proc/$pidsus/fd                   # show malware open file descriptors
+cat /proc/$pidsus/maps                    # investigate malware process maps
+cat /proc/$pidsus/status                  # get the PID status
+
+
 # lynis
 lynis audit system | grep malware > lynis.txt
 sed -i -e '1iLynis Report\' lynis.txt
