@@ -22,7 +22,6 @@ sudo chkrootkit | grep "infected" > rootkit.txt
 sed -i -e '1iChkrootkit Report\' rootkit.txt
 sed -i -e '2i***************************************\' rootkit.txt
 
-
 # rkhunter
 rkhunter -c | grep "infected" > rkhunt.txt
 sed -i -e '1iRkhunter Report\' rkhunt.txt
@@ -33,7 +32,6 @@ freshclam
 clamscan -r -i C: | grep "infected" > clamav.txt
 sed -i -e '1iClamAV Report\' clamav.txt
 sed -i -e '2i***************************************\' clamav.txt
-
 
 # Linux Malware Detect LMD https://www.tecmint.com/install-linux-malware-detect-lmd-in-rhel-centos-and-fedora/
 # edit /usr/local/maldetect/conf.maldet to include your email and scan options
