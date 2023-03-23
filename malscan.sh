@@ -20,14 +20,12 @@ read -p " From netstat output given above, what is the PID of the suspicious pro
 echo " "
 ls -al /proc/$pidsus
 echo " "
-
 cp /proc/$pidsus/exe /tmp/recovered_bin   # to recover any deleted binary
 strings /proc/$pidsus/environ             # explore process environment
 cat /proc/$pidsus/stack                   # investigate Linux malware stack
 ls -al /proc/$pidsus/fd                   # show malware open file descriptors
 cat /proc/$pidsus/maps                    # investigate malware process maps
 cat /proc/$pidsus/status                  # get the PID status
-
 
 # lynis
 lynis audit system | grep malware > lynis.txt
@@ -55,7 +53,7 @@ sed -i -e '2i***************************************\' clamav.txt
 maldet --scan-all /var/www/ > lmd.txt
 sed -i -e '1iLinux Malware Detector Report\' lmd.txt
 sed -i -e '2i***************************************\' lmd.txt
-#maldet --scan-all /var/www/*.zip
+# maldet --scan-all /var/www/*.zip
 # maldet --report 021015-1051.3559
 rm -rf /usr/local/maldetect/quarantine/* # remove quarantined files
 # maldet --clean SCANID
