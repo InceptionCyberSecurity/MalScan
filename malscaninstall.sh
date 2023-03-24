@@ -14,7 +14,6 @@ echo " This script will install and also run the malware scans. The instructions
 echo " You need to specify your Gmail credentials to allow SMTP traffic. Also run the GUI unhide, which is part of Kali Linux. "
 echo " "
 read -p " What email do you want the results to be sent to ? " umail
-
 # lynis
 cd /opt/
 wget https://downloads.cisofy.com/lynis/lynis-2.6.6.tar.gz
@@ -25,26 +24,22 @@ cd ..
 lynis audit system | grep malware > lynis.txt
 sed -i -e '1iLynis Report\' lynis.txt
 sed -i -e '2i***************************************\' lynis.txt
-
 # Check rootkit
 sudo apt install chkrootkit
 sudo chkrootkit | grep "infected" > rootkit.txt
 sed -i -e '1iChkrootkit Report\' rootkit.txt
 sed -i -e '2i***************************************\' rootkit.txt
-
 # rkhunter
 sudo apt install rkhunter
 rkhunter -c | grep "infected" > rkhunt.txt
 sed -i -e '1iRkhunter Report\' rkhunt.txt
 sed -i -e '2i***************************************\' rkhunt.txt
-
 # clamav
 sudo apt-get install clamav
 freshclam
 clamscan -r -i C: | grep "infected" > clamav.txt
 sed -i -e '1iClamAV Report\' clamav.txt
 sed -i -e '2i***************************************\' clamav.txt
-
 # Linux Malware Detect LMD https://www.tecmint.com/install-linux-malware-detect-lmd-in-rhel-centos-and-fedora/
 # edit /usr/local/maldetect/conf.maldet to include your email and scan options
 wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
@@ -62,7 +57,7 @@ sed -i -e '2i***************************************\' lmd.txt
 rm -rf /usr/local/maldetect/quarantine/* # remove quarantined files
 # maldet --clean SCANID
 # set crontab -e
-
+#
 # process txt files
 cat lynis.txt clamav.txt rootkit.txt rkhunt.txt lmd.txt | sort > malrep.txt
 sed -i -e '1iCOMBINED MALWARE REPORT Lynis chkrootkit rkhunter ClamAV LMD\' malrep.txt

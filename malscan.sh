@@ -26,28 +26,23 @@ cat /proc/$pidsus/stack                   # investigate Linux malware stack
 ls -al /proc/$pidsus/fd                   # show malware open file descriptors
 cat /proc/$pidsus/maps                    # investigate malware process maps
 cat /proc/$pidsus/status                  # get the PID status
-
 # lynis
 lynis audit system | grep malware > lynis.txt
 sed -i -e '1iLynis Report\' lynis.txt
 sed -i -e '2i***************************************\' lynis.txt
-
 # Check rootkit
 sudo chkrootkit | grep "infected" > rootkit.txt
 sed -i -e '1iChkrootkit Report\' rootkit.txt
 sed -i -e '2i***************************************\' rootkit.txt
-
 # rkhunter
 rkhunter -c | grep "infected" > rkhunt.txt
 sed -i -e '1iRkhunter Report\' rkhunt.txt
 sed -i -e '2i***************************************\' rkhunt.txt
-
 # clamav
 freshclam
 clamscan -r -i C: | grep "infected" > clamav.txt
 sed -i -e '1iClamAV Report\' clamav.txt
 sed -i -e '2i***************************************\' clamav.txt
-
 # Linux Malware Detect LMD https://www.tecmint.com/install-linux-malware-detect-lmd-in-rhel-centos-and-fedora/
 # edit /usr/local/maldetect/conf.maldet to include your email and scan options
 maldet --scan-all /var/www/ > lmd.txt
@@ -58,7 +53,7 @@ sed -i -e '2i***************************************\' lmd.txt
 rm -rf /usr/local/maldetect/quarantine/* # remove quarantined files
 # maldet --clean SCANID
 # set crontab -e
-
+#
 # process txt files
 cat lynis.txt clamav.txt rootkit.txt rkhunt.txt lmd.txt | sort > malrep.txt
 sed -i -e '1iCOMBINED MALWARE REPORT Lynis chkrootkit rkhunter ClamAV LMD\' malrep.txt
