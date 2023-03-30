@@ -3,7 +3,7 @@
  This is not a definitive scan but will give you a general snapshot. Run full scans as per your Policy. <br/>
  Sends a Combined Malware Report to a single, user defined email. Scans entire drive so can take a long time! <br/>
  BASH scripts written by Nathan Jones nathan.jones@arcadeusops.com as part of on-prem Ubuntu server setups. <br/>
- Use cron to run malscan.h regularly. <br/>
+ Use cron to run malscan.h regularly on your device. <br/>
 
 # Malware Forensics
 Don’t kill a suspicious process until you have investigated what it is doing. <br/>
